@@ -64,6 +64,7 @@ function App() {
     .then((response) => response.json())
     .then(() => {
       // Update the local state with the updated post
+      console.log("test")
       setPosts(posts.map((post) => (post.id === id ? updatedPost : post)));
     })
     .catch((error) => console.error('Error updating post:', error));
