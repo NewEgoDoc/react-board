@@ -47,7 +47,7 @@ function PostEditor({ addPost, updatePost }) {
   const handleSave = () => {
     const method = isEditing ? 'PUT' : 'POST';
     const url = isEditing ? `http://localhost:8080/api/boards/${postId}` : 'http://localhost:8080/api/boards';
-
+    console.log("before api call")
     fetch(url, {
       method: method,
       headers: { 'Content-Type': 'application/json' },
